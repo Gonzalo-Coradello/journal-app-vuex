@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pruebas en el EntryList > debe llamar el getEntriesByTerm sin argumentos y mostrar 2 entradas 1`] = `
+"<div data-v-d2f66aca="" class="entry-list-container">
+  <div data-v-d2f66aca="" class="px-2 pt-2"><input data-v-d2f66aca="" type="text" placeholder="Buscar entrada" class="form-control"></div>
+  <div data-v-d2f66aca="" class="mt-2 d-flex flex-column"><button data-v-d2f66aca="" class="btn btn-primary mx-3"><i data-v-d2f66aca="" class="fa fa-plus-circle"></i> Nueva entrada </button></div>
+  <div data-v-d2f66aca="" class="entry-scrollarea">
+    <entry-stub data-v-d2f66aca="" entry="[object Object]"></entry-stub>
+    <entry-stub data-v-d2f66aca="" entry="[object Object]"></entry-stub>
+  </div>
+</div>"
+`;

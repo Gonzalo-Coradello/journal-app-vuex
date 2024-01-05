@@ -88,4 +88,46 @@ describe('Vuex - Pruebas en el Journal Module', () => {
 
     expect(store.getters['journal/getEntryById']('-NnJqfmqd1bxoKeE81Z-')).toEqual(entry2)
   })
+
+  test('actions: loadEntries', async () => {
+    const store = createVuexStore({ isLoading: true, entries: [] })
+
+    await store.dispatch('journal/loadEntries')
+
+    expect(store.state.journal.entries.length).toBe(2)
+  })
+
+  test('actions: updateEntry', async () => {
+    const store = createVuexStore(journalState)
+
+    const updatedEntry = {
+      id: '-NnJqfmqd1bxoKeE81Z-',
+      date: 1704378127159,
+      picture:
+        'https://res.cloudinary.com/dqkb4ydrr/image/upload/v1704403189/mztes7bijs0xhp8rd9jv.jpg',
+      text: 'Hello world from unit tests!'
+    }
+
+    await store.dispatch('journal/updateEntry', updatedEntry)
+
+    const entries = store.state.journal.entries
+
+    expect(entries.length).toBe(2)
+    expect(entries).toContainEqual(updatedEntry)
+  })
+
+  test('actions: createEntry - deleteEntry', async () => {
+    const store = createVuexStore(journalState)
+
+    const newEntry = { date: 1704373996716, text: 'Nueva entrada desde las pruebas' }
+
+    const id = await store.dispatch('journal/createEntry', newEntry)
+
+    expect(id).toBeTypeOf('string')
+    expect(store.state.journal.entries).toContainEqual({ id, ...newEntry })
+
+    await store.dispatch('journal/deleteEntry', id)
+
+    expect(store.state.journal.entries).not.toContainEqual({ id, ...newEntry })
+  })
 })

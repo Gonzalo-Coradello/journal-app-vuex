@@ -1,0 +1,13 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pruebas en el EntryView > debe mostrar la entrada correctamente 1`] = `
+"<div data-v-a5d136c6="" class="entry-title d-flex justify-content-between p-2">
+  <div data-v-a5d136c6=""><span data-v-a5d136c6="" class="text-success fs-3 fw-bold">4</span><span data-v-a5d136c6="" class="mx-2 fs-3">Enero</span><span data-v-a5d136c6="" class="mx-2 fs-4 fw-light">2024, Jueves</span></div>
+  <div data-v-a5d136c6=""><input data-v-a5d136c6="" type="file" accept="image/png, image/jpeg" style="display: none;"><button data-v-a5d136c6="" class="btn btn-danger mx-2"> Borrar <i data-v-a5d136c6="" class="fa fa-trash-alt"></i></button><button data-v-a5d136c6="" class="btn btn-danger mx-2"> Subir foto <i data-v-a5d136c6="" class="fa fa-upload"></i></button></div>
+</div>
+<hr data-v-a5d136c6="">
+<div data-v-a5d136c6="" class="d-flex flex-column px-3 h-75"><textarea data-v-a5d136c6="" placeholder="¿Qué sucedió hoy?"></textarea></div>
+<img data-v-a5d136c6="" src="https://res.cloudinary.com/dqkb4ydrr/image/upload/v1704403189/mztes7bijs0xhp8rd9jv.jpg" alt="entry-picture" class="img-thumbnail">
+<!--v-if-->
+<fab-stub data-v-a5d136c6="" icon="fa-save"></fab-stub>"
+`;

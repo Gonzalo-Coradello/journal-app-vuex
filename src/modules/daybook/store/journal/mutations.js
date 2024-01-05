@@ -12,7 +12,7 @@ export const updateEntry = (state, entry) => {
 }
 
 export const addEntry = (state, entry) => {
-  state.entries.unshift(entry)
+  state.entries = [entry, ...state.entries]
 }
 
 export const deleteEntry = (state, id) => {

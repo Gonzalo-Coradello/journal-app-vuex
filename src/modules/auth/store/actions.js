@@ -51,7 +51,6 @@ export const checkAuthentication = async ({ commit }) => {
 
   try {
     const { data } = await authApi.post(':lookup', { idToken })
-    console.log(data)
     const { displayName, email } = data.users[0]
 
     const user = {

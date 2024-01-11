@@ -12,7 +12,7 @@ cloudinary.config({
 describe('Pruebas en uploadImage', () => {
   test('debe cargar un archivo y retornar el URL', async () => {
     const { data } = await axios.get(
-      'https://res.cloudinary.com/dqkb4ydrr/image/upload/v1704377930/curso-vue/mcbhdoo32dlmyxijdi9g.jpg',
+      'https://res.cloudinary.com/dqkb4ydrr/image/upload/v1704403189/mztes7bijs0xhp8rd9jv.jpg',
       {
         responseType: 'arraybuffer'
       }
@@ -29,5 +29,5 @@ describe('Pruebas en uploadImage', () => {
 
     const result = await cloudinary.v2.api.delete_resources([imageId])
     expect(result.deleted).toBeTruthy()
-  })
+  }, 50000)
 })
